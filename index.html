@@ -1001,5 +1001,26 @@
         </a>
     </div>
 
+    <!-- 상품 카드 모션 영상: iOS 저전력 모드·인앱 브라우저에서 첫 터치 시 재생 재시도 -->
+    <script>
+    (function () {
+        var vids = document.querySelectorAll('video.product-video');
+        function tryPlay() {
+            vids.forEach(function (v) {
+                if (v.paused) {
+                    var pr = v.play();
+                    if (pr && pr.catch) { pr.catch(function () {}); }
+                }
+            });
+        }
+        vids.forEach(function (v) {
+            v.addEventListener('canplay', tryPlay);
+            v.addEventListener('loadeddata', tryPlay);
+        });
+        document.addEventListener('touchstart', tryPlay, { passive: true });
+        document.addEventListener('click', tryPlay);
+    })();
+    </script>
+
 </body>
 </html>
