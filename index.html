@@ -637,6 +637,226 @@
             color: var(--text-sub);
         }
 
+        /* Customer Reviews (고객 후기) */
+        .review-intro {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-sub);
+            margin: -8px 0 18px;
+            word-break: keep-all;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .review-card {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 16px 16px 14px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .review-stars {
+            font-size: 13px;
+            line-height: 1;
+            letter-spacing: 3px;
+            color: var(--gold);
+        }
+
+        .review-text {
+            flex: 1;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #e6ece8;
+            word-break: keep-all;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 10px;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .review-who {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: var(--gold-light);
+        }
+
+        .review-product {
+            font-size: 11px;
+            letter-spacing: 0.2px;
+            color: var(--text-muted);
+        }
+
+        .review-product span {
+            color: var(--text-sub);
+        }
+
+        /* 후기가 없을 때 안내 */
+        .review-empty {
+            text-align: center;
+            border: 1px dashed var(--border-gold);
+            border-radius: 12px;
+            background: rgba(197, 168, 128, 0.04);
+            padding: 30px 20px;
+        }
+
+        .review-empty-icon {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .review-empty-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--gold-light);
+            margin-bottom: 6px;
+        }
+
+        .review-empty-sub {
+            font-size: 12px;
+            line-height: 1.6;
+            color: var(--text-sub);
+            word-break: keep-all;
+        }
+
+        /* 후기 남기기 */
+        .review-cta-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 35px;
+        }
+
+        .review-open-btn {
+            width: 100%;
+            padding: 14px 0;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #d4b48d 0%, #b38f65 100%);
+            color: #08120d;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(197, 168, 128, 0.25);
+        }
+
+        .review-panel {
+            margin-top: 16px;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 16px;
+        }
+
+        .review-panel[hidden] {
+            display: none;
+        }
+
+        .review-panel-title {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .review-route {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+        }
+
+        .review-route-info {
+            margin-bottom: 10px;
+        }
+
+        .review-route-info strong {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 3px;
+        }
+
+        .review-route-info span {
+            display: block;
+            font-size: 11px;
+            line-height: 1.5;
+            color: var(--text-sub);
+            word-break: break-all;
+        }
+
+        .review-route-btn {
+            display: block;
+            padding: 11px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .review-route-kakao {
+            background: #FEE500;
+            color: #3c1e1e;
+        }
+
+        .review-route-mail {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-light);
+        }
+
+        .review-guide {
+            list-style: none;
+            margin-top: 4px;
+        }
+
+        .review-guide li {
+            position: relative;
+            padding-left: 12px;
+            font-size: 11px;
+            line-height: 1.65;
+            color: var(--text-muted);
+            word-break: keep-all;
+        }
+
+        .review-guide li::before {
+            content: '·';
+            position: absolute;
+            left: 2px;
+            color: var(--gold);
+        }
+
+        /* 데스크톱: 후기 카드 2열 */
+        @media (min-width: 560px) {
+            .review-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .review-empty {
+                grid-column: 1 / -1;
+            }
+        }
+
         /* Floating Bottom Bar */
         .floating-bar {
             position: fixed;
@@ -941,6 +1161,77 @@
 
         </section>
 
+        <!-- ============================================================
+             고객 후기 / REVIEW
+             [운영 방법]
+             1) 후기가 도착하면 REVIEWS:START 와 REVIEWS:END 사이의
+                review-card 템플릿(아래 주석 안)을 복사해
+                내용만 바꿔 REVIEWS:START 바로 아래에 붙여넣습니다.
+             2) 게시된 후기가 1개 이상이면 review-empty 안내 박스를 지웁니다.
+             3) 실제 구매 고객이 보낸 후기만 게시합니다. 지어낸 후기는 넣지 않습니다.
+             4) 접수 경로: 카카오톡 1:1 오픈채팅 https://open.kakao.com/o/sI350XWi
+                / 이메일 21901150@hanmail.net
+             ============================================================ -->
+        <section id="reviews">
+            <div class="section-title">
+                <p>Customer Reviews</p>
+                <h2>고객 후기</h2>
+            </div>
+
+            <p class="review-intro">실제 구매 고객님이 직접 보내주신 후기만 확인 후 그대로 게시합니다.</p>
+
+            <div class="review-grid">
+                <!-- REVIEWS:START -->
+                <!-- [후기 카드 템플릿] 아래 주석을 풀어 내용을 바꾼 뒤 이 줄 위에 붙여넣으세요.
+                <article class="review-card">
+                    <div class="review-stars" aria-label="별점 5점 만점에 5점">★★★★★</div>
+                    <p class="review-text">여기에 후기 내용을 적습니다.</p>
+                    <div class="review-meta">
+                        <span class="review-who">김**</span>
+                        <span class="review-date">2026.11.17</span>
+                    </div>
+                    <div class="review-product">구매 상품 : <span>PRADA 사피아노 레더 장지갑 블랙</span></div>
+                </article>
+                -->
+                <div class="review-empty">
+                    <div class="review-empty-icon">✍️</div>
+                    <p class="review-empty-title">아직 등록된 후기가 없습니다.</p>
+                    <p class="review-empty-sub">첫 후기를 남겨 주세요. 보내주신 후기는 확인 후 이 자리에 그대로 올려드립니다.</p>
+                </div>
+                <!-- REVIEWS:END -->
+            </div>
+
+            <div class="review-cta-box">
+                <button type="button" class="review-open-btn" id="reviewOpenBtn" aria-expanded="false" aria-controls="reviewPanel">✍️ 후기 남기기</button>
+
+                <div class="review-panel" id="reviewPanel" hidden>
+                    <p class="review-panel-title">How to write a review</p>
+
+                    <div class="review-route">
+                        <div class="review-route-info">
+                            <strong>💬 카카오톡 1:1 오픈채팅</strong>
+                            <span>가장 빠릅니다. 제품 사진·영상도 함께 보내실 수 있어요.</span>
+                        </div>
+                        <a class="review-route-btn review-route-kakao" href="https://open.kakao.com/o/sI350XWi" target="_blank" rel="noopener">카톡으로 후기 보내기</a>
+                    </div>
+
+                    <div class="review-route">
+                        <div class="review-route-info">
+                            <strong>✉️ 이메일</strong>
+                            <span>21901150@hanmail.net</span>
+                        </div>
+                        <a class="review-route-btn review-route-mail" href="mailto:21901150@hanmail.net?subject=%5B%EB%84%A4%EA%B3%A0%EC%B9%98%EC%98%A4%20%EB%94%94%20%EB%A3%A8%EC%86%8C%5D%20%EA%B3%A0%EA%B0%9D%20%ED%9B%84%EA%B8%B0%20%EC%9E%91%EC%84%B1&amp;body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%2C%20%EB%84%A4%EA%B3%A0%EC%B9%98%EC%98%A4%20%EB%94%94%20%EB%A3%A8%EC%86%8C%EC%9E%85%EB%8B%88%EB%8B%A4.%0A%EC%95%84%EB%9E%98%20%EB%82%B4%EC%9A%A9%EC%9D%84%20%EC%A0%81%EC%96%B4%20%EB%B3%B4%EB%82%B4%EC%A3%BC%EC%8B%9C%EB%A9%B4%20%ED%99%95%EC%9D%B8%20%ED%9B%84%20%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EA%B3%A0%EA%B0%9D%20%ED%9B%84%EA%B8%B0%EC%97%90%20%EA%B2%8C%EC%8B%9C%ED%95%B4%20%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4.%0A%0A1%29%20%EC%83%81%ED%92%88%EB%AA%85%20%3A%0A2%29%20%EA%B5%AC%EB%A7%A4%20%EC%82%AC%EC%9D%B4%EC%A6%88%20/%20%EC%83%89%EC%83%81%20%3A%0A3%29%20%EC%A3%BC%EB%AC%B8%EC%9D%BC%20%EB%98%90%EB%8A%94%20%EC%88%98%EB%A0%B9%EC%9D%BC%20%3A%0A4%29%20%ED%9B%84%EA%B8%B0%20%EB%82%B4%EC%9A%A9%20%3A%0A%0A5%29%20%EA%B3%B5%EA%B0%9C%ED%95%A0%20%EB%8B%89%EB%84%A4%EC%9E%84%20%28%EC%9D%B4%EB%8B%88%EC%85%9C%EB%8F%84%20%EA%B0%80%EB%8A%A5%29%20%3A%0A%0A%EB%B3%B4%EB%82%B4%EC%A3%BC%EC%8B%A0%20%EC%97%B0%EB%9D%BD%EC%B2%98%EC%99%80%20%EC%A3%BC%EC%86%8C%EB%8A%94%20%ED%9B%84%EA%B8%B0%EC%97%90%20%ED%91%9C%EC%8B%9C%EB%90%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.%20%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.">메일로 후기 보내기</a>
+                    </div>
+
+                    <ul class="review-guide">
+                        <li>상품명, 구매 사이즈·색상, 후기 내용을 적어 주세요.</li>
+                        <li>공개할 닉네임(또는 이니셜)을 함께 알려 주세요. 실명은 쓰지 않아도 됩니다.</li>
+                        <li>후기는 확인 후 이 페이지에 게시되며, 연락처·주소는 게시하지 않습니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- DETAIL PAGE 1 & 2: QUALITY & WORKMANSHIP PHOTO GUIDE (DARK LUXURY) -->
         <section id="guide">
             <div class="section-title">
@@ -1010,6 +1301,26 @@
             🛍️ 스마트스토어 구매
         </a>
     </div>
+
+
+    <!-- 고객 후기: '후기 남기기' 버튼으로 카톡/메일 안내 열기 -->
+    <script>
+    (function () {
+        var btn = document.getElementById('reviewOpenBtn');
+        var panel = document.getElementById('reviewPanel');
+        if (!btn || !panel) { return; }
+        btn.addEventListener('click', function () {
+            var willOpen = panel.hasAttribute('hidden');
+            if (willOpen) {
+                panel.removeAttribute('hidden');
+            } else {
+                panel.setAttribute('hidden', '');
+            }
+            btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            btn.textContent = willOpen ? '닫기' : '✍️ 후기 남기기';
+        });
+    })();
+    </script>
 
     <!-- 상품 카드 모션 영상: iOS 저전력 모드·인앱 브라우저에서 첫 터치 시 재생 재시도 -->
     <script>
