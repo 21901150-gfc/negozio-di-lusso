@@ -179,9 +179,14 @@
         /* CTA Buttons */
         .cta-group {
             display: flex;
+            flex-wrap: wrap;
             gap: 12px;
             justify-content: center;
             margin-bottom: 30px;
+        }
+
+        .cta-group .btn {
+            flex: 1 1 140px;
         }
 
         .btn {
@@ -1363,6 +1368,109 @@
             background: #03C75A;
             color: #ffffff;
         }
+
+        /* ===== Instagram 채널 (2026-11-20 추가) ===== */
+        .btn-insta {
+            background: linear-gradient(135deg, #d8a13a 0%, #b7506f 52%, #5b3d8f 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(183, 80, 111, 0.22);
+        }
+
+        .insta-fab {
+            position: fixed;
+            right: 14px;
+            bottom: 78px;
+            z-index: 998;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(8, 18, 13, 0.92);
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            text-decoration: none;
+        }
+
+        .insta-fab svg {
+            width: 22px;
+            height: 22px;
+            display: block;
+        }
+
+        .insta-fab:active {
+            transform: scale(0.96);
+        }
+
+        /* 공식 채널 안내 */
+        .insta-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 14px;
+            padding: 20px 18px 18px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+            text-align: center;
+        }
+
+        .insta-badge {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(197, 168, 128, 0.1);
+            border: 1px solid var(--border-gold);
+            margin-bottom: 12px;
+        }
+
+        .insta-badge svg {
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+
+        .insta-handle {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--gold-light);
+            line-height: 1.4;
+        }
+
+        .insta-name {
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .insta-desc {
+            font-size: 12px;
+            line-height: 1.7;
+            color: var(--text-sub);
+            margin: 14px 0 16px;
+            word-break: keep-all;
+        }
+
+        .insta-btn {
+            display: block;
+            padding: 13px 0;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            text-decoration: none;
+            text-align: center;
+            background: linear-gradient(135deg, #d8a13a 0%, #b7506f 52%, #5b3d8f 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(183, 80, 111, 0.22);
+        }
     </style>
 </head>
 <body>
@@ -1400,6 +1508,7 @@
             <div class="cta-group">
                 <a href="https://smartstore.naver.com/halinstore" target="_blank" class="btn btn-gold">스마트스토어 바로가기  ➔</a>
                 <a href="https://open.kakao.com/o/sI350XWi" target="_blank" class="btn btn-outline">💬 1:1 카톡 상담 바로가기</a>
+                <a href="https://www.instagram.com/angeloshop1004" target="_blank" rel="noopener noreferrer" class="btn btn-insta">📸 인스타그램 @angeloshop1004</a>
             </div>
         </section>
 
@@ -1918,6 +2027,21 @@
             <p>• 배송 완료 후 5일 이내 반품 접수 (해외 반품비 100,000원 · 관부가세·인지세 별도)</p>
         </div>
 
+        <!-- Official Channels / Instagram -->
+        <section id="instagram">
+            <div class="section-title">
+                <p>Follow Us</p>
+                <h2>인스타그램에서 먼저 만나보세요</h2>
+            </div>
+            <div class="insta-box">
+                <span class="insta-badge"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5.2" fill="none" stroke="#c5a880" stroke-width="1.6"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#c5a880" stroke-width="1.6"/><circle cx="17.3" cy="6.8" r="1.15" fill="#c5a880"/></svg></span>
+                <p class="insta-handle">@angeloshop1004</p>
+                <p class="insta-name">네고치오 디 루소 · NEGOCIO DI LUSSO</p>
+                <p class="insta-desc">신상품 입고 소식과 출고 전 1:1 리얼패킹 검수 실황, 진행 중인 이벤트를 가장 먼저 전해드립니다. 구매·재입고 문의는 DM으로도 받습니다.</p>
+                <a class="insta-btn" href="https://www.instagram.com/angeloshop1004" target="_blank" rel="noopener noreferrer">📸 인스타그램 팔로우하기  ➔</a>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -1926,6 +2050,7 @@
             <p><strong>네고치오 디 루소 (NEGOCIO DI LUSSO)</strong></p>
             <p>대표자: 이남호 | 사업자등록번호: 415-13-06337 | 고객센터: <a href="tel:010-6522-0441" style="color:var(--gold);text-decoration:none;">010-6522-0441</a></p>
             <p>카카오톡 1:1 상담: <a href="https://open.kakao.com/o/sI350XWi" target="_blank" style="color:var(--gold);text-decoration:none;">네고치오 디 루소 오픈채팅 바로가기</a></p>
+            <p>인스타그램: <a href="https://www.instagram.com/angeloshop1004" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:none;">@angeloshop1004</a> · <a href="https://www.instagram.com/angeloshop1004" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:none;">네고치오 디 루소 인스타그램 바로가기</a></p>
             <p>이탈리아 부티크 B2B 공식 직수입 파트너십</p>
             <p style="margin-top: 10px; color: #435249;">© NEGOCIO DI LUSSO. All Rights Reserved.</p>
         </div>
@@ -1979,6 +2104,9 @@
         document.addEventListener('click', tryPlay);
     })();
     </script>
+
+    <!-- Instagram Floating Button -->
+    <a class="insta-fab" href="https://www.instagram.com/angeloshop1004" target="_blank" rel="noopener noreferrer" aria-label="인스타그램 @angeloshop1004 열기" title="인스타그램 @angeloshop1004"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5.2" fill="none" stroke="#c5a880" stroke-width="1.6"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#c5a880" stroke-width="1.6"/><circle cx="17.3" cy="6.8" r="1.15" fill="#c5a880"/></svg></a>
 
 </body>
 </html>
