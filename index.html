@@ -433,6 +433,13 @@
         .product-card.sold-out .product-img img {
             height: auto;
         }
+        /* 품절 카드에 쇼케이스 영상이 들어간 경우: 16:6 비율 유지 + 영상도 흑백 처리 */
+        .product-card.sold-out .product-img.has-video {
+            aspect-ratio: 1400 / 602;
+        }
+        .product-card.sold-out .product-img video {
+            filter: grayscale(100%) brightness(0.62) contrast(1.02);
+        }
         .product-img.fit-dark video {
             background: #14241b;
         }
@@ -1102,29 +1109,7 @@
             </div>
 
 
-            <!-- GUCCI-BELT-CARD:START -->
-            <!-- Product: GUCCI GG 마몽 더블 G 벨트 (쇼케이스 · 가격 미표기) -->
-<div class="product-card">
-                <div class="product-img">
-                    <video class="product-video" autoplay loop muted playsinline preload="auto"
-                           poster="videos/gucci_belt_poster.jpg" width="1400" height="602" disablepictureinpicture
-                           aria-label="구찌 GG 마몽 더블 G 벨트 블랙 레더 쇼케이스 영상">
-                        <source src="videos/gucci_belt.mp4" type="video/mp4">
-                        <img src="videos/gucci_belt_poster.jpg" alt="구찌 GG 마몽 더블 G 벨트 블랙 레더">
-                    </video>
-                </div>
-                <div class="product-info">
-                    <div class="product-brand">GUCCI</div>
-                    <div class="product-name">GG 마몽 더블 G 벨트<span class="product-code">414516 AP00T 1000</span></div>
-                    <p style="margin:2px 0 0;font-size:12px;line-height:1.55;color:#8fa196;letter-spacing:0.2px;">
-                        블랙 레더 · 앤틱 골드 하드웨어 · 폭 3cm · 이탈리아 부티크 직수입 정품
-                    </p>
-                    <div class="product-actions">
-                        <a class="pa-btn pa-kakao" href="https://open.kakao.com/o/sI350XWi" target="_blank">💬 1:1 문의하기</a>
-                    </div>
-                </div>
-            </div>
-            <!-- GUCCI-BELT-CARD:END -->
+
 
             <!-- TOMFORD-BELT-CARD:START -->
             <!-- Product: TOM FORD 그레인 레더 T 아이콘 리버시블 벨트 (판매 중) -->
@@ -1160,6 +1145,32 @@
 
             <!-- SOLD OUT Archive -->
             <div class="soldout-divider"><span>SOLD OUT · 품절</span></div>
+
+            <!-- GUCCI-BELT-CARD:START -->
+            <!-- Product: GUCCI GG 마몽 더블 G 벨트 (판매 완료 · SOLD OUT) -->
+            <div class="product-card sold-out">
+                <div class="product-img has-video">
+                    <video class="product-video" autoplay loop muted playsinline preload="auto"
+                           poster="videos/gucci_belt_poster.jpg" width="1400" height="602" disablepictureinpicture
+                           aria-label="구찌 GG 마몽 더블 G 벨트 블랙 레더 쇼케이스 영상">
+                        <source src="videos/gucci_belt.mp4" type="video/mp4">
+                        <img src="videos/gucci_belt_poster.jpg" alt="구찌 GG 마몽 더블 G 벨트 블랙 레더">
+                    </video>
+                    <span class="soldout-badge"><strong>SOLD OUT</strong><em>품절</em></span>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">GUCCI</div>
+                    <div class="product-name">GG 마몽 더블 G 벨트<span class="product-code">414516 AP00T 1000</span></div>
+                    <p style="margin:2px 0 0;font-size:12px;line-height:1.55;color:#8fa196;letter-spacing:0.2px;">
+                        블랙 레더 · 앤틱 골드 하드웨어 · 폭 3cm · 이탈리아 부티크 직수입 정품
+                    </p>
+                    <div class="product-actions">
+                        <span class="pa-btn pa-disabled">품절 · SOLD OUT</span>
+                    </div>
+                    <p class="soldout-note">재입고 문의는 <a href="https://open.kakao.com/o/sI350XWi" target="_blank">카카오톡 1:1</a>로 받습니다.</p>
+                </div>
+            </div>
+            <!-- GUCCI-BELT-CARD:END -->
 
             <!-- Product 2 (SOLD OUT) -->
             <div class="product-card sold-out">
