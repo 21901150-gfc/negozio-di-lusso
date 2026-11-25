@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://21901150-gfc.github.io/negozio-di-lusso/sitemap.xml
